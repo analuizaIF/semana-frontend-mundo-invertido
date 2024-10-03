@@ -147,32 +147,31 @@ header::before{
 }
 
 /*Estilizando imagens*/
-.world-characters{
+.world-characters {
     width: 100%;
     max-width: 900px;
     position: absolute;
-}
-
-#top-characters{
+  }
+  
+  .world-characters#top-characters {
     height: 100%;
     background-color: var(--character-top-image-color);
     bottom: -3px;
-    
-    mask: var(--character-top-image-src) bottom / 100% no-repeat;
-    --webkit-mask: var( --character-top-image-src) bottom / 100% no-repeat;
-}
-
-#bottom-characters{
+  
+    mask: var(--character-top-image-src) bottom / contain no-repeat;
+    -webkit-mask: var(--character-top-image-src) bottom / 100% no-repeat;
+  }
+  
+  .world-characters#bottom-characters {
     height: 500px;
     background-color: var(--character-bottom-image-color);
     top: 3px;
     transform: rotateZ(180deg) scaleX(-1);
-    position: relative;   
-
+    position: relative;
+  
     mask: var(--character-bottom-image-src) bottom / contain no-repeat;
-    --webkit-mask: var(--character-bottom-image-src) bottom / 100% no-repeat;
-    
-}
+    -webkit-mask: var(--character-bottom-image-src) bottom / 100% no-repeat;
+  }
 
 main{
     position: relative;
@@ -346,22 +345,27 @@ section{
 }
 
 /*Formulario*/
-input, textarea{
+input,
+textarea {
     border: 2px solid var(--primary-color-contrast);
     background-color: var(--field-background-color);
     color: var(--primary-color-contrast);
     padding: 8px;
-    margin-bottom: 24px;
-    font-size: 1rem;
 }
 
-label{
+input,
+textarea {
+    margin-bottom: 24px;
+}
+
+label {
     margin-bottom: 8px;
 }
 
-input:focus-visible, textarea:focus-visible{
-    border: none;
-    border-color: #000000;
+input:focus-visible,
+textarea:focus-visible {
+    outline: none;
+    border-color: black;
 }
 
 /*Footer*/
